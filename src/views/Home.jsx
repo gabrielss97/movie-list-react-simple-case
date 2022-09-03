@@ -18,13 +18,16 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="container">
-      {movies.map((movie) => (
-        <div key={movie.id}>
-          <MovieCard movie={movie} />
-        </div>
-      ))}
-    </div>
+    <>
+      <h1>BRANCH GABRIEL</h1>
+      <div className="container">
+        {movies.map((movie) => (
+          <div key={movie.id}>
+            <MovieCard movie={movie} />
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 
