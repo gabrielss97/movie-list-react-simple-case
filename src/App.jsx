@@ -8,7 +8,7 @@ function App() {
   const [searchValue, setSearchValue] = useState("");
 
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundColor: "#303030" }}>
       <Header onSubmit={(inputValue) => setSearchValue(inputValue)} />
       <Routes>
         <Route path="/" element={<Home searchValueProp={searchValue} />} />
