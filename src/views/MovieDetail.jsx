@@ -17,32 +17,40 @@ const MovieDetail = () => {
     getMovie();
   }, []);
 
+  useEffect(() => {
+    console.log(movie);
+  });
+
   return (
     <section className="movie-detail">
-      <Link to={`/`} className="btn btn-primary back">
-        Voltar
-      </Link>
-      <div className="container">
-        <div className="row gx-5">
-          <div className="col-12">
+      <div className="movie-detail__container">
+        <div className="movie-detail__col">
+          <h1 className="movie-detail__title">{movie.title}</h1>
+          <div className="movie-detail__image">
             <img
-              src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`}
+              src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`}
               alt=""
             />
           </div>
-          <div className="col-12">
-            <h1>{movie.title}</h1>
-          </div>
         </div>
-        <div className="row">
-          <div className="col-12">
-            <ul>
-              <li>Budget: {movie.budget}</li>
-              <li>Original language: {movie.original_language}</li>
-              <li>Popularity: {movie.popularity}</li>
-              <li>Overview: {movie.overview}</li>
-            </ul>
+        <div className="movie-detail__col">
+          <div className="movie-detail__details">
+            <div className="movie-detail__detail">
+              <span>Budget:</span> {movie.budget}
+            </div>
+            <div className="movie-detail__detail">
+              <span>Original language:</span> {movie.original_language}
+            </div>
+            <div className="movie-detail__detail">
+              <span>Popularity:</span> {movie.popularity}
+            </div>
+            <div className="movie-detail__detail">
+              <span>Overview:</span> {movie.overview}
+            </div>
           </div>
+          <a href="/" className="movie-detail__button">
+            Voltar
+          </a>
         </div>
       </div>
     </section>
