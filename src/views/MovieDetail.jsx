@@ -48,9 +48,9 @@ const MovieDetail = () => {
               <span>Overview:</span> {movie.overview}
             </div>
           </div>
-          <a href="/" className="movie-detail__button">
+          <Link to={"/"} className="movie-detail__button">
             Voltar
-          </a>
+          </Link>
         </div>
       </div>
     </section>
